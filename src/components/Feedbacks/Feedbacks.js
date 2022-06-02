@@ -57,7 +57,9 @@ class Feedbacks extends Component {
 
   countPositiveFeedbackPercentage = () => {
     this.setState(state => ({
-      positivePercentage: ((state.good / state.total) * 100).toFixed(1),
+      positivePercentage: parseFloat(
+        ((state.good / state.total) * 100).toFixed(1)
+      ),
     }));
   };
 
