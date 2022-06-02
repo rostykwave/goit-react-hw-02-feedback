@@ -1,0 +1,15 @@
+button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+
+  padding: 12px 20px;
+}
+
+button:not(:last-child) {
+  margin-right: 7px;
+}
+
+.button-set {
+  text-align: center;
+}
