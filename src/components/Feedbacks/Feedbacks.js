@@ -2,6 +2,7 @@ import { Component } from 'react';
 // import PropTypes from 'prop-types';
 import Statistics from './Statistics/Statistics';
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
+import Section from './Section/Section';
 import s from './Feedbacks.module.css';
 
 class Feedbacks extends Component {
@@ -65,40 +66,30 @@ class Feedbacks extends Component {
 
     return (
       <div className={s.Feedbacks}>
-        <h3>Please leave feedback</h3>
+        <Section title="Please leave feedback">
+          <FeedbackOptions
+            options={{
+              onGood: 'Good',
+              onNeutral: 'Neutral',
+              onBad: 'Bad',
+            }}
+            onLeaveFeedback={{
+              onGood: this.handleGood,
+              onNeutral: this.handleNeutral,
+              onBad: this.handleBad,
+            }}
+          ></FeedbackOptions>
+        </Section>
 
-        {/* <div className={s['button-set']}>
-          <button type="button" onClick={this.handleGood}>
-            Good
-          </button>
-          <button type="button" onClick={this.handleNeutral}>
-            Neutral
-          </button>
-          <button type="button" onClick={this.handleBad}>
-            Bad
-          </button>
-        </div> */}
-
-        <FeedbackOptions
-          options={{
-            onGood: 'Good',
-            onNeutral: 'Neutral',
-            onBad: 'Bad',
-          }}
-          onLeaveFeedback={{
-            onGood: this.handleGood,
-            onNeutral: this.handleNeutral,
-            onBad: this.handleBad,
-          }}
-        ></FeedbackOptions>
-
-        <Statistics
-          good={good}
-          neutral={neutral}
-          bad={bad}
-          total={total}
-          positivePercentage={positivePercentage}
-        ></Statistics>
+        <Section title="Statistics">
+          <Statistics
+            good={good}
+            neutral={neutral}
+            bad={bad}
+            total={total}
+            positivePercentage={positivePercentage}
+          ></Statistics>
+        </Section>
       </div>
     );
   }
