@@ -1,8 +1,8 @@
 import { Component } from 'react';
-// import PropTypes from 'prop-types';
 import Statistics from './Statistics/Statistics';
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Section from './Section/Section';
+import Notification from './Notification/Notification';
 import s from './Feedbacks.module.css';
 
 class Feedbacks extends Component {
@@ -84,13 +84,19 @@ class Feedbacks extends Component {
         </Section>
 
         <Section title="Statistics">
-          <Statistics
-            good={good}
-            neutral={neutral}
-            bad={bad}
-            total={total}
-            positivePercentage={positivePercentage}
-          ></Statistics>
+          {!total > 0 && (
+            <Notification message="There is no feedback"></Notification>
+          )}
+
+          {total > 0 && (
+            <Statistics
+              good={good}
+              neutral={neutral}
+              bad={bad}
+              total={total}
+              positivePercentage={positivePercentage}
+            ></Statistics>
+          )}
         </Section>
       </div>
     );

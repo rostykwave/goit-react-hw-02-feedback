@@ -3,7 +3,8 @@ button {
   cursor: pointer;
   outline: none;
 
-  padding: 12px 20px;
+  padding: 14px 25px;
+  border-radius: 5px;
 }
 
 button:not(:last-child) {
@@ -12,4 +13,16 @@ button:not(:last-child) {
 
 .button-set {
   text-align: center;
+}
+
+.button--red {
+  background-color: rgb(230, 69, 69);
+  color: aliceblue;
+}
+.button--yellow {
+  background-color: yellow;
+}
+.button--green {
+  background-color: rgb(55, 160, 55);
+  color: aliceblue;
 }
