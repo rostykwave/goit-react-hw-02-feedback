@@ -3,7 +3,7 @@ import s from './Section.module.css';
 
 const Section = ({ title, children }) => (
   <section className={s.sPadding}>
-    {title && <h3>{title}</h3>}
+    {title && <h2>{title}</h2>}
     {children}
   </section>
 );
