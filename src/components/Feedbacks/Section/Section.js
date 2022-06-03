@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import s from './Section.module.css';
 
 const Section = ({ title, children }) => (
-  <section>
+  <section className={s.sPadding}>
     {title && <h3>{title}</h3>}
     {children}
   </section>
