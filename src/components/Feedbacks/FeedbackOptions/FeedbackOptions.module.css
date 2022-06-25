@@ -16,13 +16,13 @@ button:not(:last-child) {
 }
 
 .button--red {
-  background-color: rgb(230, 69, 69);
-  color: aliceblue;
+  background-color: #e64545;
+  color: #f0f8ff;
 }
 .button--yellow {
-  background-color: yellow;
+  background-color: #ffff00;
 }
 .button--green {
-  background-color: rgb(55, 160, 55);
+  background-color: #37a037;
   color: aliceblue;
 }
