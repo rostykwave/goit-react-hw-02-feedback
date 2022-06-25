@@ -12,24 +12,24 @@ const StyledButton = styled.button`
   background-color:${p => {
   switch (p.children) {
     case 'Good':
-      return '#37a037';
+      return p.theme.colors.good;
     case 'Bad':   
-      return '#e64545';
+      return p.theme.colors.bad;
     case 'Neutral':
-      return '#ffff00';
+      return p.theme.colors.neutral;
     default:
-      return 'aliceblue';
+      return p.theme.colors.light;
   }
 }};
   
  color:${p => {
   switch (p.children) {
     case 'Good':
-      return '#f0f8ff';
+      return p.theme.colors.light;
     case 'Bad':
-      return '#f0f8ff';
+      return p.theme.colors.light;
     default:
-      return '#000000';
+      return p.theme.colors.dark;
   }
 }};
   
