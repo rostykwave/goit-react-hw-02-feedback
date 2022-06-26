@@ -1,9 +1,17 @@
-import Feedbacks from "./Feedbacks";
+import { Box } from './Box';
+import Feedbacks from './Feedbacks';
 
 export const App = () => {
   return (
-    <div>
-     <Feedbacks/>
-    </div>
+    <Box
+      width={[1, 2 / 3, 1 / 2, 1 / 2]}
+      mr="auto"
+      ml="auto"
+      bg="background"
+      boxShadow="medium"
+      as="section"
+    >
+      <Feedbacks />
+    </Box>
   );
 };

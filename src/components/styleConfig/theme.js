@@ -1,5 +1,6 @@
 export const theme = Object.freeze({
   colors: {
+    background: '#f7f6f3',
     good: '#37a037',
     neutral: '#ffff00',
     bad: '#e64545',
@@ -21,4 +22,5 @@ export const theme = Object.freeze({
     light: '0px 10px 33px -25px rgba(0, 0, 0, 0.38)',
   },
   border: '1px solid #ebeff4',
+  breakpoints: ['480px', '768px', '1280px'],
 });
