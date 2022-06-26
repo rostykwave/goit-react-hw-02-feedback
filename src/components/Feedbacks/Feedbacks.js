@@ -1,9 +1,8 @@
 import { Component } from 'react';
 import Statistics from './Statistics';
-import { FeedbackOptions } from './FeedbackOptions.jsx';
+import { FeedbackOptions } from './Feedbacks.styled.jsx';
 import Section from './Section';
 import Notification from './Notification';
-import s from './Feedbacks.module.css';
 
 class Feedbacks extends Component {
   state = {
@@ -59,7 +58,7 @@ class Feedbacks extends Component {
     const { good, neutral, bad, total, positivePercentage } = this.state;
 
     return (
-      <div className={s.Feedbacks}>
+      <>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={{
@@ -90,7 +89,7 @@ class Feedbacks extends Component {
             ></Statistics>
           )}
         </Section>
-      </div>
+      </>
     );
   }
 }
