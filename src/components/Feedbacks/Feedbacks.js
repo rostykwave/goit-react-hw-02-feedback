@@ -6,14 +6,6 @@ import Notification from './Notification';
 import s from './Feedbacks.module.css';
 
 class Feedbacks extends Component {
-  // static defaultProps = {
-  //     InitialValue:0,
-  // }
-
-  // static propTypes = {
-  //     //
-  // }
-
   state = {
     good: 0,
     neutral: 0,
