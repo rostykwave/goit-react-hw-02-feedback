@@ -1,7 +1,8 @@
+import { Box } from 'components/styleConfig/Box';
 import PropTypes from 'prop-types';
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
-  <div>
+  <Box p="15px">
     <p>
       Good: <span>{good}</span>
     </p>
@@ -14,10 +15,10 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
     <p>
       Total: <span>{total}</span>
     </p>
-    <p>
+    <Box as="p" mt="40px">
       Positive feedback: <span>{positivePercentage}%</span>
-    </p>
-  </div>
+    </Box>
+  </Box>
 );
 
 Statistics.propTypes = {

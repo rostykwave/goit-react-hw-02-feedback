@@ -1,11 +1,11 @@
+import { Box } from 'components/styleConfig/Box';
 import PropTypes from 'prop-types';
-import s from './Section.module.css';
 
 const Section = ({ title, children }) => (
-  <section className={s.sPadding}>
+  <Box as="section" p="15px 5px">
     {title && <h2>{title}</h2>}
     {children}
-  </section>
+  </Box>
 );
 
 Section.propTypes = {
