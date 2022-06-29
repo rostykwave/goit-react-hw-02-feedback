@@ -1,7 +1,6 @@
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const StyledButton = styled.button`
+export const StyledButton = styled.button`
   border: none;
   cursor: pointer;
   outline: none;
@@ -54,25 +53,6 @@ const StyledButton = styled.button`
   }
 `;
 
-const ButtonSet = styled.div`
+export const ButtonSet = styled.div`
   text-align: center;
 `;
-
-export const FeedbackOptions = ({ options, onLeaveFeedback }) => (
-  <ButtonSet>
-    <StyledButton type="button" onClick={onLeaveFeedback.onGood}>
-      {options.onGood}
-    </StyledButton>
-    <StyledButton type="button" onClick={onLeaveFeedback.onNeutral}>
-      {options.onNeutral}
-    </StyledButton>
-    <StyledButton type="button" onClick={onLeaveFeedback.onBad}>
-      {options.onBad}
-    </StyledButton>
-  </ButtonSet>
-);
-
-FeedbackOptions.propTypes = {
-  options: PropTypes.object.isRequired,
-  onLeaveFeedback: PropTypes.object.isRequired,
-};

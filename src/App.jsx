@@ -1,5 +1,5 @@
+import { Feedbacks } from 'components/Feedbacks/Feedbacks';
 import { Box } from './components/styleConfig/Box';
-import Feedbacks from './components/Feedbacks';
 
 export const App = () => {
   return (

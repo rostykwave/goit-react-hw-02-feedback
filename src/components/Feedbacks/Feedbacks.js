@@ -1,8 +1,8 @@
 import { Component } from 'react';
-import Statistics from './Statistics';
-import { FeedbackOptions } from './Feedbacks.styled.jsx';
-import Section from './Section';
-import Notification from './Notification';
+import { FeedbackOptions } from './Options/FeedbackOptions';
+import { Section } from './Section/Section';
+import { Statistics } from './Statistics/Statistics';
+import { Notification } from './Notification/Notification';
 
 class Feedbacks extends Component {
   state = {
@@ -94,4 +94,4 @@ class Feedbacks extends Component {
   }
 }
 
-export default Feedbacks;
+export { Feedbacks };

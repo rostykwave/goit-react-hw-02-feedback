@@ -1,7 +1,13 @@
 import { Box } from 'components/styleConfig/Box';
 import PropTypes from 'prop-types';
 
-const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
+export const Statistics = ({
+  good,
+  neutral,
+  bad,
+  total,
+  positivePercentage,
+}) => (
   <Box p="15px">
     <p>
       Good: <span>{good}</span>
@@ -28,5 +34,3 @@ Statistics.propTypes = {
   total: PropTypes.number.isRequired,
   positivePercentage: PropTypes.number.isRequired,
 };
-
-export default Statistics;
