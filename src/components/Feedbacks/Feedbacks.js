@@ -4,7 +4,7 @@ import { Section } from './Section/Section';
 import { Statistics } from './Statistics/Statistics';
 import { Notification } from './Notification/Notification';
 
-class Feedbacks extends Component {
+export class Feedbacks extends Component {
   state = {
     good: 0,
     neutral: 0,
@@ -71,27 +71,23 @@ class Feedbacks extends Component {
               onNeutral: this.handleNeutral,
               onBad: this.handleBad,
             }}
-          ></FeedbackOptions>
+          />
         </Section>
 
         <Section title="Statistics">
-          {!total > 0 && (
-            <Notification message="There is no feedback"></Notification>
-          )}
-
-          {total > 0 && (
+          {total > 0 ? (
             <Statistics
               good={good}
               neutral={neutral}
               bad={bad}
               total={total}
               positivePercentage={positivePercentage}
-            ></Statistics>
+            />
+          ) : (
+            <Notification message="There is no feedback" />
           )}
         </Section>
       </>
     );
   }
 }
-
-export { Feedbacks };

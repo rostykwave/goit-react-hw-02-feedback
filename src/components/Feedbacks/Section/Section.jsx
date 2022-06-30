@@ -1,4 +1,4 @@
-import { Box } from 'components/styleConfig/Box';
+import { Box } from 'styleConfig/Box';
 import PropTypes from 'prop-types';
 
 export const Section = ({ title, children }) => (
